@@ -1,0 +1,44 @@
+        POB Et1
+        ŁAD Tmp1
+        POB Et2
+        ŁAD Tmp2
+        POB N
+        ŁAD M        
+    P1: POB M
+        SOZ P2
+        ODE St1
+        ŁAD M
+   Et1: POB Tab        
+        DNS
+        POB Et1
+        DOD St1
+        ŁAD Et1
+        SOB P1
+    P2: POB N
+        ŁAD M
+    P3: POB M
+        SOZ Koniec
+        ODE St1
+        ŁAD M   
+        PZS
+   Et2: ŁAD Tab
+        POB Et2
+        DOD St1
+        ŁAD Et2   
+        SOB P3
+Koniec: POB Tmp1
+        ŁAD Et1
+        POB Tmp2
+        ŁAD Et2
+        STP                                     
+   St1: RST 1
+     N: RST 5
+     M: RPA
+  Tmp1: RPA
+  Tmp2: RPA     
+   Tab: RST 1
+        RST 2
+        RST 3
+        RST 4
+        RST 5
+    
