@@ -1,0 +1,21 @@
+
+PETLA:
+
+
+KONIEC:
+
+
+
+A:
+B:
+POB A
+ODE B
+SOM KONIEC
+SOB PETLA
+DOD B
+STP
+
+//DANE
+RST 14
+RST 3
+
