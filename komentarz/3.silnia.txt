@@ -1,0 +1,63 @@
+POB LICZBA 
+SOZ JEDENZERO//sprawdzamy czy liczb nie jest 0
+ODE ST1 //sprawdzamy czy liczba nie jest równa 1
+SOZ JEDENZERO //jeśli tak to skok do jedenzero
+ŁAD LICZNIK// liczbę można użyć jako licznika
+POB ST1
+ŁAD WYNIK //wynik równa się jeden
+POB ST2
+ŁAD MNK //posłuży jako mnożnik 
+PETLA: POB WYNIK 
+DNS //wynik dodajemy na stos
+POB MNK
+DNS //mnk dodajemy na stos
+SDP MNOZENIE //skok do podprogramu 
+PZS
+ŁAD WYNIK//pobieramy z stosu wartość zwróconą
+POB MNK
+DOD ST1
+ŁAD MNK //zwiększamy mnożnik o 1
+POB LICZNIK
+ODE ST1
+ŁAD LICZNIK //zmniejszamy licznik o 1
+SOZ KONIEC //warunek końca pracy programu 
+SOB PETLA //skok bez war. do petli
+KONIEC: POB WYNIK//wynik wypisujemy do AK
+STP
+JEDENZERO: POB ST1
+ŁAD WYNIK  //1! i 0! równa się 1, więc wynik=1
+STP
+            
+MNOZENIE: PZS 
+ŁAD ADR //pobieramy adr z stosu 
+POB ST0
+ŁAD WYN //wynik zerujemy 
+PZS
+ŁAD A //pobieramy mnk z stosu i ładujemy do a
+PZS
+ŁAD B //pobieramy wynik z stosu i ładujemy do b
+PETELKA: ODE ST1 //b jako licznik pętelki
+SOM KONMNO //warunek końcowy podprogramu
+ŁAD B
+POB WYN       
+DOD A
+ŁAD WYN //wykonujemy dodawanie w pętelce
+POB B
+SOB PETELKA //skos bez war. do petelka
+KONMNO: POB WYN
+DNS // wynik mnożenia dajemy na stos
+POB ADR
+DNS //adr tez dodajemy na stos
+PWR //powrót z podprogramu 
+
+ ST0: RST 0
+ ST1: RST 1
+ ST2: RST 2
+ A: RPA
+ B: RPA
+ WYNIK: RPA
+ WYN: RPA
+ MNK: RPA
+ ADR: RPA
+ LICZNIK: RPA 
+ LICZBA: RST 5
