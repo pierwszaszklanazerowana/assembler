@@ -1,10 +1,10 @@
-		   POB A
-PETLA: ODE B
-		   SOM KONIEC
-		   SOB PETLA
-KONIEC:DOD B
-		   STP
+        POB A
+PETLA:  ODE B
+        SOM KONIEC
+        SOB PETLA
+KONIEC: DOD B
+        STP
 
-		//DANE
-A:	   RST 14
-B:		 RST 3
+	//DANE
+A:      RST 14
+B:	RST 3
