@@ -11,4 +11,4 @@
 11. Wyszukiwanie największej liczby w tablicy o znanej długości
 12. Sprawdzanie czy dana liczba jest liczbą pierwszą z wykorzystaniem podprogramu reszty z dzielenia
 
-Komentarz do 2,3,6,10,11
+Komentarz do 2,3,4-inne,6,10,11
