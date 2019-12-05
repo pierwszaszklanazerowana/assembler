@@ -1,0 +1,68 @@
+        POB St0
+        ŁAD NWW
+        ŁAD AxB
+        POB M
+        SOZ Koniec
+        ŁAD A
+        DNS
+        POB N
+        SOZ Koniec
+        ŁAD B
+        DNS
+    P1: POB A  
+        SOZ P2
+        ODE St1
+        ŁAD A
+        POB AxB
+        DOD B
+        ŁAD AxB
+        SOB P1
+    P2: SDP PP_NWD
+        PZS
+        ŁAD NWD 
+    P3: POB AxB
+        ODE NWD
+        SOM Koniec
+        ŁAD AxB
+        POB NWW
+        DOD St1
+        ŁAD NWW
+        SOB P3   
+Koniec: POB NWW        
+        STP
+        
+   NWW: RPA
+   NWD: RPA     
+     M: RST 20
+     N: RST 30
+     A: RPA
+     B: RPA
+   AxB: RPA
+   St0: RST 0  
+   St1: RST 1
+   
+   
+PP_NWD: PZS
+        ŁAD TempL
+        PZS
+        ŁAD TempB
+        PZS
+Szukaj: ŁAD TempA
+  Test: ODE TempB
+        SOM a<b
+        SOZ a=b
+        SOB Szukaj
+   a<b: POB TempB
+        ODE TempA
+        ŁAD TempB
+        POB TempA
+        SOB Test
+   a=b: POB TempB
+        DNS
+        POB TempL
+        DNS
+        PWR
+        
+ TempA: RPA
+ TempB: RPA
+ TempL: RPA       
