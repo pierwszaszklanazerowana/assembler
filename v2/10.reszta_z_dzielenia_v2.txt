@@ -1,0 +1,20 @@
+		POB ST0
+		ŁAD WYN
+		POB A
+		ŁAD POM
+PETLA:  ODE B
+		SOM MINUS
+		ŁAD POM
+		POB WYN
+		DOD ST1
+		ŁAD WYN
+		POB POM
+		SOB PETLA
+MINUS:  POB WYN
+STP
+ST0: 	RST 0
+ST1: 	RST 1
+WYN: 	RPA
+POM: 	RPA
+A: 		RST 20
+B: 		RST 7
