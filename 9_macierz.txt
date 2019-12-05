@@ -29,7 +29,7 @@ END2:
   POB WYZ
   STP
 
-//PODPROGRAM MNOŁENIE  
+//PODPROGRAM MNOŻENIE  
 Mnozenie: PZS
           ŁAD Ślad
           PZS
