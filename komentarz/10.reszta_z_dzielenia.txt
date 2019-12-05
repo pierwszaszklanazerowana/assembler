@@ -1,0 +1,25 @@
+Program ładuje na starcie wartość zmiennej A do zmiennej WYNIK, w której 
+będzie przechowywany rezultat potęgowania. Następnie sprawdza warunki szczególne, 
+które powodują zakończenie programu bez wykonywania obliczeń: jeśli A wynosi 0 to 
+wynikiem potęgowania jest 0, jeśli 1 to wynikiem jest 1. Następnie wykonuje te 
+czynności dla danej N ładowanej do zmiennej WYKLADNIK (będzie to licznik, 
+oznaczający ile razy trzeba jeszcze przemnożyć wynik przez wartość A) - jeśli 
+wynosi 0 to skacze do etykiety ZERO (wynikiem działania jest wtedy 1 niezależnie od A), 
+jeśli nie to przechodzi do głównej pętli programu: na jej początku dekrementuje licznik
+i sprawdza czy jest zerem - jeśli tak, to potęgowanie zostało zakończone, 
+program skacze do etykiety KONIEC i maszyna jest zatrzymywana 
+(jeśli N wynosiło na starcie 1 program również zostanie zakończony, a wynikiem będzie wartość A). 
+Jeśli nie, następuje zapisanie na stosie postawy potęgi (A) i aktualnego wyniku (WYNIK),
+oraz skok do podprogramu MNOZENIE. Po jego wykonaniu na szczycie stosu będzie wynik mnożenia, 
+ładowany do zmiennej WYNIK. Na końcu pętli do akumulatora pobierany jest licznik (WYKLADNIK) 
+i program skacze do etykiety PETLA, czyli dekrementacji licznika.
+
+Podprogram MNOZENIE:
+Zgodnie ze sposobem działania rozkazu SDP, na szczycie stosu znajduje się licznik maszyny W, 
+który na początku podprogramu jest zapisywany do zmiennej lokalnej STOS_LICZNIK. Następnie, 
+pobierany jest jeden z czynników, dekrementowany (przy mnożeniu przez 4 trzeba dodać liczbę trzykrotnie)  
+i zapisywany jako STOS_MNOZNIK, drugi czynnik jest zapamiętywany w akumulatorze i zmiennej STOS_TMP. 
+Główna pętla to dodanie do akumulatora wartości STOS_TMP i zapisanie jako STOS_WYNIK, następnie dekrementacja 
+wartości zmiennej STOS_MNOZNIK (pełniącej rolę licznika) i wczytanie STOS_WYNIK do akumulatora, wykonująca 
+się do momentu, w którym licznik będzie wynosił zero. Wówczas następuje skok do etykiety STOS_KONIEC 
+która zapisuje wynik na stosie, na szczyt stosu dopisuje zapamiętaną w zmiennej STOS_LICZNIK wartość licznika (wymóg rozkazu PWR) i wraca do programu głównego.
