@@ -1,0 +1,32 @@
+  POB dlugosc 
+  ODE ST1
+  SOM koniec 
+  ŁAD dlugosc
+  POB tab
+  ŁAD max 
+  POB test
+  DOD ST1
+  ŁAD test 
+petla: POB dlugosc
+  ODE ST1
+  SOM koniec
+  ŁAD dlugosc
+test: POB tab
+  ODE max
+  SOM et
+  DOD max
+  ŁAD max
+et: POB test
+  DOD ST1
+  ŁAD test
+  SOB petla
+koniec: STP
+tab: RST 5
+  RST 7
+  RST -5
+  RST -7
+  RST 54
+  RST 0
+dlugosc: RST 6
+max: RPA
+ST1: RST 1
