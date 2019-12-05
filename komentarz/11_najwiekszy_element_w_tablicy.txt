@@ -1,0 +1,33 @@
+  POB dlugosc //pobieram długość tablicy
+  ODE ST1
+  SOM koniec //sprawdzam czy ma elementy
+  ŁAD dlugosc
+  POB tab
+  ŁAD max //1 element ładuje do MAXa
+  POB test
+  DOD ST1
+  ŁAD test //przechodzę do kolejnego elementu
+petla: POB dlugosc
+  ODE ST1
+  SOM koniec
+  ŁAD dlugosc //dekrementuje licznik i
+  // sprawdzam czy nie koniec
+test: POB tab
+  ODE max
+  SOM et
+  DOD max //zwracam pierwotną wartość
+  ŁAD max //i zapisuje nowego MAXa
+et: POB test
+  DOD ST1
+  ŁAD test
+  SOB petla //przechodzę do kolejnego //elementu w tablicy
+koniec: STP
+tab: RST 5
+  RST 7
+  RST -5
+  RST -7
+  RST 54
+  RST 0
+dlugosc: RST 6
+max: RPA
+ST1: RST 1
