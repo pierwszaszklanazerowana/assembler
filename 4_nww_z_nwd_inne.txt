@@ -1,0 +1,55 @@
+
+// Obliczanie NWW - dwie liczby naturalne a, b
+
+
+// Sprawdzenie, czy przypadkiem nie są równe
+pob a
+ode b
+soz rowne 
+
+// Kopiowanie do zmiennych pomocniczych
+pob a
+ład Ta
+pob b
+ład Tb
+
+petla:
+
+// Spr. czy są równe -> koniec programu
+
+      pob Ta
+      ode Tb
+      soz koniec 
+      
+// Szukanie większej z liczb
+
+      som b_wiek_a
+      
+      
+// Przypadek a>b
+      pob Tb
+      dod b
+      ład Tb
+      sob petla
+      
+// Przypadek b>a
+b_wiek_a:
+       pob Ta
+       dod a
+       ład Ta
+       sob petla
+
+
+rowne:
+      pob a
+      stp     
+koniec: 
+        pob Ta
+        stp
+
+
+// a,b: liczby do obliczenia NWD       
+a: rst 1
+b: rst 8
+Ta: rpa
+Tb: rpa      
