@@ -1,2 +1,22 @@
-Program inicjalizuje zmienną WYNIK wartością 0, następnie wykonuje pętlę zliczającą ilość wystąpień wartości zapisanej w zmiennej A w tablicy o liczbie elementów N. Na początku pętli odejmuje od licznika (inicjalizowanego długością tablicy) stałą 1 i sprawdza znak licznika - ujemny licznik powoduje wyjście z pętli (tablica o długości 0 spowoduje wyjście z programu, długość 1 powoduje jednokrotne wykonanie pętli itd.). Kolejnym krokiem jest pobranie wartości z tablicy, do której odnosi się etykieta ET1 i odjęcie od niej szukanej wartości A. Jeśli wynik jest ujemny - wartość A jest większa od wartości w tablicy, następuje skok do etykiety DALEJ. Jeśli wynik jest dodatni, program odejmuje od niego 1 - jeśli wciąż jest dodatni, wartość A jest mniejsza od wartości w tablicy, a program przechodzi do rozkazu znajdującego się pod etykietą DALEJ, będącego kolejnym rozkazem w pamięci. Jeśli jednak akumulator zmienił znak na ujemny, to wynikiem odejmowania od wartości z tablicy wartości A było zero - oznacza to, że te wartości były równe, wtedy następuje przejście do etykiety ROWNE która inkrementuje WYNIK (ilość wystąpień wartości A) i skacze do etykiety DALEJ. Teraz następuje inkrementacja etykiety ET1, dzięki czemu będzie ona wskazywała kolejny element tablicy, pobranie wartości licznika do akumulatora i przejście na początek pętli. Po sprawdzeniu wszystkich elementów tablicy (dekrementacja licznika na początku pętli spowoduje zmianę jego znaku na ujemny) program przeskakuje do etykiety KONIEC - ta przywraca rozkaz przy etykiecie ET1 na pierwotny (wskaźnik na pierwszy element tablicy jest przechowywany pod etykietą PAMIEC), pobiera wynik działania programu do akumulatora i zatrzymuje maszynę.
-
+Program inicjalizuje zmienną WYNIK wartością 0, następnie wykonuje 
+pętlę zliczającą ilość wystąpień wartości zapisanej w zmiennej A w 
+tablicy o liczbie elementów N. Na początku pętli odejmuje od licznika 
+(inicjalizowanego długością tablicy) stałą 1 i sprawdza znak licznika
+ - ujemny licznik powoduje wyjście z pętli (tablica o długości 0 spowoduje 
+ wyjście z programu, długość 1 powoduje jednokrotne wykonanie pętli itd.). 
+ Kolejnym krokiem jest pobranie wartości z tablicy, do której odnosi się 
+ etykieta ET1 i odjęcie od niej szukanej wartości A. Jeśli wynik jest ujemny 
+ - wartość A jest większa od wartości w tablicy, następuje skok do etykiety 
+ DALEJ. Jeśli wynik jest dodatni, program odejmuje od niego 1 - jeśli wciąż 
+ jest dodatni, wartość A jest mniejsza od wartości w tablicy, a program przechodzi 
+ do rozkazu znajdującego się pod etykietą DALEJ, będącego kolejnym rozkazem w pamięci. 
+ Jeśli jednak akumulator zmienił znak na ujemny, to wynikiem odejmowania od wartości 
+ z tablicy wartości A było zero - oznacza to, że te wartości były równe, wtedy 
+ następuje przejście do etykiety ROWNE która inkrementuje WYNIK (ilość wystąpień wartości A) 
+ i skacze do etykiety DALEJ. Teraz następuje inkrementacja etykiety ET1, dzięki czemu 
+ będzie ona wskazywała kolejny element tablicy, pobranie wartości licznika do akumulatora i 
+ przejście na początek pętli. Po sprawdzeniu wszystkich elementów tablicy 
+ dekrementacja licznika na początku pętli spowoduje zmianę jego znaku na ujemny)
+ program przeskakuje do etykiety KONIEC - ta przywraca rozkaz przy etykiecie ET1 
+ na pierwotny (wskaźnik na pierwszy element tablicy jest przechowywany pod etykietą PAMIEC),
+ pobiera wynik działania programu do akumulatora i zatrzymuje maszynę.
