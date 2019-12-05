@@ -1,0 +1,63 @@
+  POB A1
+  SOZ END 
+  DNS
+  POB B2
+  SOZ END
+  DNS
+  SDP Mnozenie
+End: 
+  POB WYZ
+  DOD TMP
+  ŁAD WYZ
+  POB TMP
+  ODE TMP
+  ŁAD TMP
+  POB A2
+  SOZ END2
+  DNS
+  POB B1
+  SOZ END2
+  DNS
+  SDP Mnozenie
+END2:
+  POB WYZ
+  ODE TMP
+  ŁAD WYZ
+  POB TMP
+  ODE TMP
+  ŁAD TMP
+  POB WYZ
+  STP
+
+//PODPROGRAM MNOŁENIE  
+Mnozenie: PZS
+          ŁAD Ślad
+          PZS
+          ŁAD A
+          PZS
+          ŁAD B
+          Petla:
+                POB TMP
+                DOD B
+                ŁAD TMP
+                POB A
+                ODE LICZ
+                ŁAD A
+                SOZ Koniec
+                SOB Petla
+          Koniec:
+                 POB Ślad
+                 DNS
+                 PWR                   
+                               
+//ZMIENNE
+WYZ: RST 0
+TMP: RST 0
+Ślad: RPA
+A: RPA
+B: RPA
+LICZ: RST 1
+A1: RST 2
+A2: RST 3
+B1: RST 2
+B2: RST 6
