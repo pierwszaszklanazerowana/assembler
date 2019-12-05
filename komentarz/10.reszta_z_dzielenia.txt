@@ -1,0 +1,3 @@
+Program pobiera dzielną (zmienna A), następnie odejmuje w pętli dzielnik (zmienna B) 
+aż do momentu, w którym wynik odejmowania będzie ujemny. Wówczas dodaje dzielnik, w 
+rezultacie uzyskując ostatnią nieujemną wartość - jest to reszta z dzielenia, pozostawiana w akumulatorze po wykonaniu programu.
