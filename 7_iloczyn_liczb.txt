@@ -1,0 +1,24 @@
+ POB zero
+ ŁAD wynik
+ POB a
+ SOZ Koniec
+ POB b
+ SOZ Koniec
+ 
+Petla: POB b
+ ODE Jeden
+ SOM Koniec
+ ŁAD b
+ POB Wynik
+ DOD a
+ ŁAD Wynik
+ SOB Petla
+ 
+Koniec: POB Wynik 
+ STP
+ 
+a: RST 4
+b: RST 3
+zero: RST 0
+Jeden: RST 1
+Wynik: RPA
