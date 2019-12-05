@@ -1,0 +1,65 @@
+
+
+
+ppetla:
+       pob n
+       ode i
+       soz pierwsza
+       
+       pob n
+       dns
+       pob i
+       dns
+       sdp modulo
+       soz zlozona
+       sob pdalej
+       
+pdalej:
+       pob i
+       dod jeden
+       ład i
+       sob ppetla
+zlozona:
+        pob feil
+        stp
+pierwsza:
+         pob sukces
+         stp
+         
+
+n: rst 9
+i: rst 2
+feil: rst 666
+sukces: rst 777
+
+modulo:
+       pzs
+       ład slad
+       pzs
+       ład mb
+       pzs
+       ład ma
+       
+mpetla:
+       pob ma
+       ode mb
+       ład ma
+       som mkoniec
+       sob mpetla
+
+mkoniec:
+        pob ma
+        dod mb
+        ład ma
+        
+        pob slad
+        dns
+        pob ma
+        pwr
+        
+ma: rpa
+mb: rpa
+slad: rpa
+jeden: rst 1
+
+        
