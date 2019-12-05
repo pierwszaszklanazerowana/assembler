@@ -1,0 +1,43 @@
+
+
+pob a
+dns
+pob b
+dns
+sdp modulo
+stp
+
+a: rst 50
+b: rst 7
+
+modulo:
+       pzs
+       ład slad
+       pzs
+       ład mb
+       pzs
+       ład ma
+       
+mpetla:
+       pob ma
+       ode mb
+       ład ma
+       som mkoniec
+       sob mpetla
+
+mkoniec:
+        pob ma
+        dod mb
+        ład ma
+        
+        pob slad
+        dns
+        pob ma
+        pwr
+        
+ma: rpa
+mb: rpa
+slad: rpa
+jeden: rst 1
+
+        
