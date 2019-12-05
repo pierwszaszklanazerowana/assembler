@@ -1,0 +1,66 @@
+  pob LICZBA
+  ład SILNIA
+  som MNZERO // LICZBA < 0 ?
+  ode ST2
+  som ZERJED // LICZBA = 0 || 1 ?
+  ode ST1
+  som DWOJKA // LICZBA = 2?
+  dod ST2
+LOOP: ład LICZBA // LICZBA to też licznik
+  dns
+  pob SILNIA
+  dns
+  sdp MNOZENIE // PP Mnożenie
+  pzs // Pobieramy wynik mnoż.
+  ład SILNIA
+  pob LICZBA // Zostało mnożenie
+  ode ST2 // przez 1?
+  som KONIEC
+  dod ST1
+  sob LOOP
+MNOZENIE:
+  pzs
+  ład ADR // Zachowujemy adres
+  pzs
+  ład TSIL // TSIL będzie trzymać
+  ład TSIL_ORG // nowy wynik
+  pzs // Mnożnik-licznik
+  ład TLA
+OPER: ode ST2 // Mnozenie *1 ?
+  som KMNO
+  dod ST1
+  ład TLA
+  pob TSIL // „Mnożenie” zmiennej
+  dod TSIL_ORG // poprzez dodawanie oryg.
+  ład TSIL // wartości
+  pob TLA
+  sob OPER
+  KMNO: pob TSIL // a’ka „Koniec mnożenia”
+  dns
+  pob ADR // Wynik I adres na stos
+  dns
+  pwr // Powrót
+MNZERO: // N<0
+  pob ST0
+  ład SILNIA
+  stp
+ZERJED: // N = 0 || 1
+  pob ST1
+  ład SILNIA
+  stp
+DWOJKA: // N = 2
+  pob ST2
+  ład SILNIA
+  stp
+KONIEC:
+  pob SILNIA
+  stp
+ADR: rpa
+ST0: rst 0
+ST1: rst 1
+ST2: rst 2
+SILNIA: rpa
+LICZBA: rst 6
+TSIL: rpa
+TSIL_ORG: rpa
+TLA: rpa
