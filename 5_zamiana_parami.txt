@@ -1,0 +1,52 @@
+
+
+petla:
+
+pob n
+ode two
+ład n
+soz end
+
+      
+rozk1: pob tab1
+ład tmp
+rozk2: pob tab2
+rozk3: ład tab1
+pob tmp
+rozk4: ład tab2
+
+pob rozk1
+dod two
+ład rozk1
+
+pob rozk2
+dod two
+ład rozk2
+
+pob rozk3
+dod two
+ład rozk3
+
+pob rozk4
+dod two
+ład rozk4
+ 
+sob petla
+
+end:
+    stp
+    
+    
+tab1: rst 10
+tab2: rst 20
+rst 30
+rst 40
+rst 50
+rst 60
+
+n: rst 6
+
+size: rst 6
+one: rst 1
+two: rst 2
+tmp: rpa
